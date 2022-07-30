@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -41,10 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        playButton.SetActive(true);
-        gameOver.SetActive(true);
-
-        Pause();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Pause()
